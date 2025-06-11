@@ -1,0 +1,15 @@
+C:\Users\alext\Tarea3Estudiante\bin\Debug\net9.0\Tarea3Estudiante.exe
+C:\Users\alext\Tarea3Estudiante\bin\Debug\net9.0\Tarea3Estudiante.deps.json
+C:\Users\alext\Tarea3Estudiante\bin\Debug\net9.0\Tarea3Estudiante.runtimeconfig.json
+C:\Users\alext\Tarea3Estudiante\bin\Debug\net9.0\Tarea3Estudiante.dll
+C:\Users\alext\Tarea3Estudiante\bin\Debug\net9.0\Tarea3Estudiante.pdb
+C:\Users\alext\Tarea3Estudiante\obj\Debug\net9.0\Tarea3Estudiante.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alext\Tarea3Estudiante\obj\Debug\net9.0\Tarea3Estudiante.AssemblyInfoInputs.cache
+C:\Users\alext\Tarea3Estudiante\obj\Debug\net9.0\Tarea3Estudiante.AssemblyInfo.cs
+C:\Users\alext\Tarea3Estudiante\obj\Debug\net9.0\Tarea3Estudiante.csproj.CoreCompileInputs.cache
+C:\Users\alext\Tarea3Estudiante\obj\Debug\net9.0\Tarea3Estudiante.sourcelink.json
+C:\Users\alext\Tarea3Estudiante\obj\Debug\net9.0\Tarea3Estudiante.dll
+C:\Users\alext\Tarea3Estudiante\obj\Debug\net9.0\refint\Tarea3Estudiante.dll
+C:\Users\alext\Tarea3Estudiante\obj\Debug\net9.0\Tarea3Estudiante.pdb
+C:\Users\alext\Tarea3Estudiante\obj\Debug\net9.0\Tarea3Estudiante.genruntimeconfig.cache
+C:\Users\alext\Tarea3Estudiante\obj\Debug\net9.0\ref\Tarea3Estudiante.dll
