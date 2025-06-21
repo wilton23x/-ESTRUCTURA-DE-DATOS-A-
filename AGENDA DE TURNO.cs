@@ -1,18 +1,14 @@
-﻿using System;
-using System.Linq;
-
-class Turno
+﻿class Turno
 {
-    // Propiedades del turno
     public string Nombre { get; set; }
     public string Cedula { get; set; }
-    public DateTime FechaHora { get; set; }
+    public System.DateTime FechaHora { get; set; }
 }
 
 class AgendaTurnos
 {
-    Turno[] turnos = new Turno[100]; // Vector de turnos
-    int contador = 0;
+    private Turno[] turnos = new Turno[100];
+    private int contador = 0;
 
     public void AgendarTurno()
     {
@@ -20,46 +16,43 @@ class AgendaTurnos
         {
             Turno nuevo = new Turno();
 
-            Console.Write("Ingrese nombre del paciente: ");
-            nuevo.Nombre = Console.ReadLine();
+            System.Console.Write("Ingrese nombre del paciente: ");
+            nuevo.Nombre = System.Console.ReadLine();
 
-            Console.Write("Ingrese cédula (solo números): ");
+            System.Console.Write("Ingrese cédula (solo números): ");
             string cedula;
             do
             {
-                cedula = Console.ReadLine();
-                if (!cedula.All(char.IsDigit))
-                    Console.Write("Cédula inválida. Intente de nuevo: ");
-            } while (!cedula.All(char.IsDigit));
+                cedula = System.Console.ReadLine();
+                if (!EsSoloNumeros(cedula))
+                    System.Console.Write("Cédula inválida. Intente de nuevo: ");
+            } while (!EsSoloNumeros(cedula));
             nuevo.Cedula = cedula;
 
-            // Captura y validación de la fecha
-            DateTime fecha;
-            Console.Write("Ingrese fecha del turno (dd/mm/aaaa): ");
-            while (!DateTime.TryParse(Console.ReadLine(), out fecha))
+            System.Console.Write("Ingrese fecha del turno (dd/mm/aaaa): ");
+            System.DateTime fecha;
+            while (!System.DateTime.TryParse(System.Console.ReadLine(), out fecha))
             {
-                Console.Write("Fecha inválida. Intente de nuevo (dd/mm/aaaa): ");
+                System.Console.Write("Fecha inválida. Intente de nuevo (dd/mm/aaaa): ");
             }
 
-            // Captura y validación de la hora
-            TimeSpan hora;
-            Console.Write("Ingrese hora del turno (hh:mm, formato 24h): ");
-            while (!TimeSpan.TryParse(Console.ReadLine(), out hora))
+            System.Console.Write("Ingrese hora del turno (hh:mm, formato 24h): ");
+            System.TimeSpan hora;
+            while (!System.TimeSpan.TryParse(System.Console.ReadLine(), out hora))
             {
-                Console.Write("Hora inválida. Intente de nuevo (hh:mm): ");
+                System.Console.Write("Hora inválida. Intente de nuevo (hh:mm): ");
             }
 
-            // Combina fecha y hora
             nuevo.FechaHora = fecha.Date + hora;
 
             turnos[contador] = nuevo;
             contador++;
 
-            Console.WriteLine("✅ Turno registrado correctamente.\n");
+            System.Console.WriteLine("✅ Turno registrado correctamente.\n");
         }
         else
         {
-            Console.WriteLine("❌ No hay espacio para más turnos.\n");
+            System.Console.WriteLine("❌ No hay espacio para más turnos.\n");
         }
     }
 
@@ -67,24 +60,37 @@ class AgendaTurnos
     {
         if (contador == 0)
         {
-            Console.WriteLine("⚠️ No hay turnos registrados.\n");
+            System.Console.WriteLine("⚠️ No hay turnos registrados.\n");
             return;
         }
 
-        Console.WriteLine("\n📋 Turnos registrados:");
+        System.Console.WriteLine("\n📋 Turnos registrados:");
         for (int i = 0; i < contador; i++)
         {
-            Console.WriteLine($"Paciente: {turnos[i].Nombre}");
-            Console.WriteLine($"Cédula: {turnos[i].Cedula}");
-            Console.WriteLine($"Fecha y hora: {turnos[i].FechaHora:dd/MM/yyyy HH:mm}");
-            Console.WriteLine("-----------------------------");
+            System.Console.WriteLine($"Paciente: {turnos[i].Nombre}");
+            System.Console.WriteLine($"Cédula: {turnos[i].Cedula}");
+            System.Console.WriteLine($"Fecha y hora: {turnos[i].FechaHora:dd/MM/yyyy HH:mm}");
+            System.Console.WriteLine("-----------------------------");
         }
 
-        Console.WriteLine($"Total de turnos: {contador}\n");
+        System.Console.WriteLine($"Total de turnos: {contador}\n");
+    }
+
+    private bool EsSoloNumeros(string texto)
+    {
+        if (string.IsNullOrEmpty(texto))
+            return false;
+
+        foreach (char c in texto)
+        {
+            if (c < '0' || c > '9')
+                return false;
+        }
+        return true;
     }
 }
 
-class MainApp
+class Program
 {
     static void Main()
     {
@@ -93,15 +99,15 @@ class MainApp
 
         do
         {
-            Console.WriteLine("---- MENÚ ----");
-            Console.WriteLine("1. Agendar nuevo turno");
-            Console.WriteLine("2. Ver turnos agendados");
-            Console.WriteLine("3. Salir");
-            Console.Write("Seleccione una opción: ");
+            System.Console.WriteLine("---- MENÚ ----");
+            System.Console.WriteLine("1. Agendar nuevo turno");
+            System.Console.WriteLine("2. Ver turnos agendados");
+            System.Console.WriteLine("3. Salir");
+            System.Console.Write("Seleccione una opción: ");
 
-            string entrada = Console.ReadLine();
+            string entrada = System.Console.ReadLine();
             int.TryParse(entrada, out opcion);
-            Console.WriteLine();
+            System.Console.WriteLine();
 
             switch (opcion)
             {
@@ -112,14 +118,13 @@ class MainApp
                     agenda.MostrarTurnos();
                     break;
                 case 3:
-                    Console.WriteLine("👋 Saliendo del sistema...");
+                    System.Console.WriteLine("👋 Saliendo del sistema...");
                     break;
                 default:
-                    Console.WriteLine("❌ Opción no válida.\n");
+                    System.Console.WriteLine("❌ Opción no válida.\n");
                     break;
             }
 
         } while (opcion != 3);
     }
 }
-// Este código implementa un sistema de agenda de turnos para pacientes.
