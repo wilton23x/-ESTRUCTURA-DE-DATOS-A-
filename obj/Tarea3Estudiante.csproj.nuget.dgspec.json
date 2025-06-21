@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alext\\Tarea3Estudiante\\Tarea3Estudiante.csproj": {}
+    "C:\\Users\\alext\\OneDrive\\Escritorio\\Deberes UEA\\FUNDAMENTOS DE PROGRAMACIÓN\\-ESTRUCTURA-DE-DATOS-A-\\Tarea3Estudiante.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alext\\Tarea3Estudiante\\Tarea3Estudiante.csproj": {
+    "C:\\Users\\alext\\OneDrive\\Escritorio\\Deberes UEA\\FUNDAMENTOS DE PROGRAMACIÓN\\-ESTRUCTURA-DE-DATOS-A-\\Tarea3Estudiante.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alext\\Tarea3Estudiante\\Tarea3Estudiante.csproj",
+        "projectUniqueName": "C:\\Users\\alext\\OneDrive\\Escritorio\\Deberes UEA\\FUNDAMENTOS DE PROGRAMACIÓN\\-ESTRUCTURA-DE-DATOS-A-\\Tarea3Estudiante.csproj",
         "projectName": "Tarea3Estudiante",
-        "projectPath": "C:\\Users\\alext\\Tarea3Estudiante\\Tarea3Estudiante.csproj",
+        "projectPath": "C:\\Users\\alext\\OneDrive\\Escritorio\\Deberes UEA\\FUNDAMENTOS DE PROGRAMACIÓN\\-ESTRUCTURA-DE-DATOS-A-\\Tarea3Estudiante.csproj",
         "packagesPath": "C:\\Users\\alext\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alext\\Tarea3Estudiante\\obj\\",
+        "outputPath": "C:\\Users\\alext\\OneDrive\\Escritorio\\Deberes UEA\\FUNDAMENTOS DE PROGRAMACIÓN\\-ESTRUCTURA-DE-DATOS-A-\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alext\\AppData\\Roaming\\NuGet\\NuGet.Config"
