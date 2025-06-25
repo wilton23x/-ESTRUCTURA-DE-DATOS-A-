@@ -1,12 +1,8 @@
-﻿using System;
-using System.Linq;
-
-class Turno
+﻿class Turno
 {
-    // Propiedades del turno
     public string Nombre { get; set; }
     public string Cedula { get; set; }
-    public DateTime FechaHora { get; set; }
+    public System.DateTime FechaHora { get; set; }
 }
 
 class AgendaTurnos
@@ -21,13 +17,13 @@ class AgendaTurnos
             Turno nuevo = new Turno();
 
             System.Console.Write("Ingrese nombre del paciente: ");
-            nuevo.Nombre = System.Console.ReadLine() ?? "";
+            nuevo.Nombre = System.Console.ReadLine();
 
             System.Console.Write("Ingrese cédula (solo números): ");
             string cedula;
             do
             {
-                cedula = System.Console.ReadLine() ?? "";
+                cedula = System.Console.ReadLine();
                 if (!EsSoloNumeros(cedula))
                     System.Console.Write("Cédula inválida. Intente de nuevo: ");
             } while (!EsSoloNumeros(cedula));
@@ -96,7 +92,7 @@ class AgendaTurnos
 
 class Program
 {
-    static void Program()
+    static void Main()
     {
         AgendaTurnos agenda = new AgendaTurnos();
         int opcion;
@@ -109,7 +105,7 @@ class Program
             System.Console.WriteLine("3. Salir");
             System.Console.Write("Seleccione una opción: ");
 
-            string entrada = System.Console.ReadLine() ?? "";
+            string entrada = System.Console.ReadLine();
             int.TryParse(entrada, out opcion);
             System.Console.WriteLine();
 
